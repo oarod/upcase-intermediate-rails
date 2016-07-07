@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'monban'
 gem 'monban-generators'
+gem 'paperclip'
 
 gem 'rails', '4.2.5.2'
 gem 'sqlite3'

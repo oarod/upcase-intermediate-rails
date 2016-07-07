@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: [:show]
   resource :session, only: [:new, :create, :destroy]
-  resources :shouts, only: [:show, :create]
-  resources :users, only: [:show, :new, :create]
+  resources :shouts, only: [:show]
+  resources :photo_shouts, only: [:create]
+  resources :text_shouts, only: [:create]
+  resources :users, only: [:show, :new, :create] do
+    post 'follow' => 'follows#create'
+  end
 end
