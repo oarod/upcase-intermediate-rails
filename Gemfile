@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'monban'
 gem 'monban-generators'
 gem 'paperclip'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 gem 'rails', '4.2.5.2'
 gem 'sqlite3'

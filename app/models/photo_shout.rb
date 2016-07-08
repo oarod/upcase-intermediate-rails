@@ -4,4 +4,8 @@ class PhotoShout < ActiveRecord::Base
   }
 
   validates_attachment :image, content_type: { content_type: /\Aimage\/.*\Z/ }
+
+  def index
+    image_file_name
+  end
 end

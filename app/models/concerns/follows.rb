@@ -12,12 +12,16 @@ module Follows
     has_many :followers, through: :follower_relationships
   end
 
-  def follow(user)
-    followees << user
+  def can_follow?(user)
+    self != user
   end
 
   def follows?(user)
     followee_ids.include?(user.id)
+  end
+
+  def follow(user)
+    followees << user
   end
 
   def unfollow(user)
